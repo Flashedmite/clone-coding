@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+  font-family: "Noto Sans KR";
+}
+
+body {
+  background-color: #1c1c1c;
+  color: white;
+
+  padding: 0;
+  margin: 0;
+}
+
+.fa-check-circle {
+  color: cornflowerblue;
+}
+
+.top__bar {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top__bar > .fas {
+  margin-right: 30px;
+}
+
+.logo--zone {
+  text-align: center;
+}
+
+.search--area {
+  text-align: center;
+}
+
+#search {
+  background-color: #333;
+  color: white;
+  height: 45px;
+  width: 650px;
+  padding-left: 15px;
+  font-size: 16px;
+  border: 1px solid #171717;
+  outline: none;
+  border-radius: 7px;
+}
+
+#search::placeholder {
+  font-size: 16px;
+  color: #a3a4a8;
+}
+.fa-search {
+  position: relative;
+  right: 35px;
+}
+.description {
+  text-align: center;
+}
+.description > h1 {
+  margin: 15px;
+}
+p {
+  margin: 5px;
+}
+ul,
+li {
+  list-style-type: none;
+  display: inline;
+}
+
+li > i {
+  padding-left: 10px;
+}
+li > span {
+  padding-right: 10px;
+}
+
+#instead {
+  background-color: cornflowerblue;
+  color: white;
+  width: 290px;
+  height: 45px;
+  font-size: 15px;
+
+  border: 1px solid cornflowerblue;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.flexbox > div {
+  background-color: #282828;
+  text-align: center;
+  width: 310px;
+  height: 330px;
+  border-radius: 25px;
+}
+
+.flexbox > div > img {
+  margin-top: 45px;
+}
+
+.flexbox > div > h1 {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.flexbox > div > p {
+  padding: 0px 25px;
+}
+
+.flexbox > div > p > a {
+  color: #678fff;
+  text-decoration: none;
+}
+
+#private > h1 {
+  margin-top: 10px;
+}

@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+  font-family: "Noto Sans KR";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-tiems: center;
+}
+
+a {
+  color: rgb(114, 114, 114);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 10px;
+}
+
+a:hover {
+  color: rgb(150.179, 177);
+  text-decoration: underline;
+}
+
+.searchArea {
+  padding-top: 80px;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchBar {
+  text-align: center;
+  padding-top: 20px;
+}
+
+input[type="search"] {
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 25px;
+  padding-left: 40px;
+  width: 480px;
+  height: 45px;
+
+  outline: none;
+  font-size: 15px;
+}
+
+.fa-search {
+  position: absolute;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.fa-microphone {
+  /*
+  position: absolute;
+  padding-left: 440px;
+  padding-top: 5px;*/
+  position: relative;
+  right: 35px;
+}
+
+.searchButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.buttons {
+  color: rgb(50, 50, 50);
+  font-size: 14px;
+  height: 36px;
+  padding: 0px 16px;
+  background-color: rgb(250, 250, 250);
+
+  border: 1px solid rgb(256, 256, 256, 0);
+  border-radius: 2px;
+  margin: 11px 4px;
+}
+
+.buttons:hover {
+  border: 1px solid gray;
+}
+
+.navBar {
+  position: fixed;
+  bottom: 0px;
+}
+
+.navBar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(195, 195, 195);
+  background-color: rgb(230, 230, 230);
+}
+
+.navBar > div {
+  height: 40px;
+}
+
+.navBar > div > span {
+  padding-left: 30px;
+}
+
+.row1 {
+  border-bottom: 1px solid rgb(195, 195, 195);
+}
+
+.row1 > span {
+  text-align: left;
+  vertical-align: middle;
+}
+
+#col1 {
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+#col1 > a,
+#col2 > a {
+  font-size: 15px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#col2 {
+  padding-right: 20px;
+  float: right;
+  vertical-align: middle;
+}
