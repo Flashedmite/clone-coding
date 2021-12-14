@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .cEvent {
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        background: #f00;
+        color: #fff;
+        font-weight: bolder;
+      }
+
+      .cEvent:hover {
+        transform: rotate(45deg);
+      }
+    </style>
+    <script>
+      function headerClick() {
+        alert("응기잇!");
+        var p = document.getElementById("title");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="cEvent" onclick="headerClick()">헤으응</div>
+  </body>
+</html>

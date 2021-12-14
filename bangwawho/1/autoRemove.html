@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      window.onload = () => {
+        let str = '<p id="jsTitle">javaScript & node.js</p>';
+        str += '<img src="2.jpg" width="300px" id="logoImg"/>';
+        str += "<br>동적으로 넣은 텍스트는 3초 후 사라짐";
+        document.body.innerHTML = str;
+
+        var id = setTimeout(() => {
+          var t = document.getElementById("jsTitle");
+          t.parentNode.removeChild(t);
+          var i = document.getElementById("logoImg");
+          i.parentNode.removeChild(i);
+        }, 3000);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

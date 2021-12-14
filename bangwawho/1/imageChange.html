@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      var imageTitle = ["1.jpg", "2.jpg", "3.png", "4.jpg"];
+      var andCount = 0;
+      var imageIndex = 0;
+      var imageActive = true;
+
+      window.onload = function () {
+        let str = "";
+        str += '<p id="jsTitle">js and node.js</p>';
+        str += '<img id="Girl" src="2.jpg" height="300"><br>';
+        document.body.innerHTML = str;
+
+        let hi = document.createElement("hi");
+        hi.innerHTML = "Hi! Hello!<br>";
+        document.body.appendChild(hi);
+
+        let andAddBtn = document.createElement("Button");
+        andAddBtn.textContent = "Click Here To Change!";
+        andAddBtn.style.height = "60px";
+        andAddBtn.style.width = "160px";
+        andAddBtn.onclick = function () {
+          andCount += 1;
+          let t = document.getElementById("jsTitle");
+          t.innerHTML = `js ${"AND ".repeat(andCount)}node`;
+        };
+        document.body.appendChild(andAddBtn);
+
+        let removeBtn = document.createElement("Button");
+        removeBtn.textContent = "Click Here To Remove!";
+        removeBtn.style.height = "60px";
+        removeBtn.style.width = "160px";
+        removeBtn.onclick = function () {
+          andCount -= 1;
+          if (andCount < 0) andCount = 0;
+          let t = document.getElementById("jsTitle");
+          t.innerHTML = `js ${"AND ".repeat(andCount)}node`;
+        };
+        document.body.appendChild(removeBtn);
+      };
+
+      setInterval(function () {
+        if (imageIndex >= imageTitle.length) imageIndex = 0;
+        let image = document.getElementById("Girl");
+        image.src = imageTitle[imageIndex];
+        imageIndex += 1;
+      }, 1000);
+    </script>
+  </head>
+  <body></body>
+</html>

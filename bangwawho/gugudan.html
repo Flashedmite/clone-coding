@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td,
+      tr,
+      th {
+        padding: 10px 10px;
+        border: 1px solid black;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        var isOdd = confirm("홀수로 진행하시겠습니까?");
+        var dan = parseInt(prompt("2 ~ 원하는 단 입력", "7"));
+        console.log(typeof dan);
+        if (isNaN(dan)) {
+          alert("숫자가 입력되지 않았습니다.");
+          return;
+        }
+
+        var theTable = document.createElement("table");
+        var trNode = document.createElement("tr");
+
+        // 단 표시 1행
+        for (let TitleDan = 2; TitleDan <= dan; TitleDan++) {
+          if (isOdd && TitleDan % 2 == 0) continue;
+          else if (!isOdd && TitleDan % 2 == 1) continue;
+          thNode = document.createElement("th");
+          thNode.appendChild(document.createTextNode(`${TitleDan}단`));
+          trNode.appendChild(thNode);
+        }
+        theTable.appendChild(trNode);
+
+        // 구구단 내용
+        for (let z = 1; z <= 9; z++) {
+          trNode = document.createElement("tr");
+          for (let x = 2; x <= dan; x++) {
+            if (isOdd && x % 2 == 0) continue;
+            else if (!isOdd && x % 2 == 1) continue;
+            tdNode = document.createElement("td");
+            tdNode.appendChild(document.createTextNode(`${x * z}`));
+            trNode.appendChild(tdNode);
+          }
+          theTable.appendChild(trNode);
+        }
+
+        document.body.appendChild(theTable);
+      };
+      /*
+            // 테이블 간단한 추력
+            window.onload = function () {
+              var dan = prompt("2 ~ 원하는 단 입력", "7");
+              var theTable = document.createElement("table");
+              var trNode = document.createElement("tr");
+              var tdNode = document.createElement("td");
+
+              for (let x = 2; x <= dan; x++) {
+                trNode = document.createElement("tr");
+                for (let z = 1; z <= 9; z++) {
+                  tdNode = document.createElement("td");
+                  tdNode.appendChild(document.createTextNode(`${x * z}`));
+                  trNode.appendChild(tdNode);
+                }
+                theTable.appendChild(trNode);
+              }
+
+              document.body.appendChild(theTable);
+            };
+            */
+    </script>
+  </head>
+  <body></body>
+</html>

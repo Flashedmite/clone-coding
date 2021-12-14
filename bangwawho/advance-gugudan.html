@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      table {
+        margin: 0px auto;
+      }
+      td {
+        text-align: center;
+        width: 300px;
+        height: 100px;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        let numGugu = prompt("출력 단 수 입력 1~", "1");
+        let goalDan = 9;
+        if (isNaN(parseInt(numGugu))) {
+          goalDan = 9;
+          alert("string inputted");
+        } else goalDan = Math.min(Math.max(parseInt(numGugu), 4), 30);
+
+        let table = document.createElement("table");
+        table.setAttribute("border", "1px solid black");
+        table.id = "gugudan";
+        console.log(table);
+        document.body.append(table);
+
+        var currentDan = 2;
+        let id = setInterval(function () {
+          addDan(currentDan, table);
+          currentDan++;
+          if (currentDan > goalDan) clearInterval(id);
+        }, 500);
+      };
+
+      function addDan(dan) {
+        let table = document.getElementById("gugudan");
+        let tr = document.createElement("tr");
+
+        for (let index = 2; index <= 9; index++) {
+          let td = document.createElement("td");
+          if ((dan + index) % 2 == 1) {
+            td.style.backgroundColor = "#1f1e33";
+            td.style.color = "white";
+          }
+          td.innerHTML = `${dan} * ${index} = ${dan * index}`;
+          tr.appendChild(td);
+
+          table.appendChild(tr);
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
